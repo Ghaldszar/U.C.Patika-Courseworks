@@ -13,7 +13,7 @@ public class HipotenusveAlanHesapla {
     	System.out.print("1.Kenarın Uzunluğunu Giriniz : ");
     	a = input.nextInt();
 
-    	System.out.print("1.Kenarın Uzunluğunu Giriniz : ");
+    	System.out.print("2.Kenarın Uzunluğunu Giriniz : ");
     	b = input.nextInt();
 
     	hipotenus = Math.sqrt(Math.pow(a , 2) + Math.pow(b , 2));

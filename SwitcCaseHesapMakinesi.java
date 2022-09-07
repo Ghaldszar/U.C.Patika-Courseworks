@@ -32,6 +32,9 @@ public class SwitcCaseHesapMakinesi {
     	case 4: 
     		System.out.print("Sonuç : " + (double)(number1 / number2));
     		break;
+			
+	default : System.out.print("Yanlış Giriş Yaptınız");
+
     	}
 
 

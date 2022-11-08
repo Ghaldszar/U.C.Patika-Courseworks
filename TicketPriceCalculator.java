@@ -75,14 +75,18 @@ public class TicketPriceCalculator {
     }
 
     public static double flightTypeDiscount(int flightType) {
+    	double returnValue = 0;
     	switch (flightType) {
-    	case 1: 
-    		return 0;
-    	case 2:
-    		return 0.20; 
-    	default:
-    		return 0;
+    		case 1: 
+    			returnValue = 0;
+    			break;
+    		case 2:
+    			returnValue = 0.20; 
+    			break;
+    		default:
+    			break;
     	}
+    	return returnValue;
     }
 }
 

@@ -4,9 +4,8 @@ public class AdditionOfNumbersDividableToTwoAndFour {
 	
 	public static void main(String[] args) {
 		
-		int count = 0;
-		int countTwos = 0;
-		int countFours = 0;
+		// int countTwos = 0;
+		// int countFours = 0;
 		int enteredNumber;
 		double additionOfTwos = 0;
 		double additionOfFours = 0;
@@ -18,12 +17,12 @@ public class AdditionOfNumbersDividableToTwoAndFour {
 		while (enteredNumber >= 0 && enteredNumber % 2 == 0) {
 			if (enteredNumber % 2 == 0) {
 				additionOfTwos += enteredNumber;
-				countTwos++;
+				// countTwos++;
 				
 			}
 			if (enteredNumber % 4 == 0) {
 				additionOfFours += enteredNumber;
-				countFours++;
+				// countFours++;
 			}
 
 			System.out.print("Sayıyı Girin : ");

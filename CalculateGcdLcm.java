@@ -4,22 +4,15 @@ public class CalculateGcdLcm {
 
     public static void main(String[] args) {
     	
+    	int bigNumber = 0;
+    	int smallNumber = 0;
+
     	Scanner keybInput = new Scanner(System.in);
 
     	System.out.print("İlk Sayı : ");
     	int firstNumber = keybInput.nextInt();
     	System.out.print("İkinci Sayı : ");
     	int secondNumber = keybInput.nextInt();
-
-    	obeb(firstNumber , secondNumber);
-    	okek(firstNumber , secondNumber);
-    }
-
-    static void obeb(int firstNumber , int secondNumber) {
-    	
-    	int bigNumber = 0;
-    	int smallNumber = 0;
-    	int commonMultiply = 1;
 
     	if (firstNumber > secondNumber) {
     		bigNumber = firstNumber;
@@ -29,6 +22,14 @@ public class CalculateGcdLcm {
     		smallNumber = firstNumber;
     		bigNumber = secondNumber;
     	}
+
+    	obeb(bigNumber , smallNumber);
+    	okek(bigNumber , smallNumber);
+    }
+
+    static void obeb(int bigNumber , int smallNumber) {
+    	
+    	int commonMultiply = 1;
 
     	int i = 2;
     	while (i <= smallNumber) {
@@ -42,20 +43,9 @@ public class CalculateGcdLcm {
     	System.out.printf("OBEB : %d \n" , commonMultiply);
     }
 
-    static void okek(int firstNumber , int secondNumber) {
+    static void okek(int bigNumber , int smallNumber) {
 
-    	int bigNumber = 0;
-    	int smallNumber = 0;
     	int commonMultiply = 1;	
-
-    	if (firstNumber > secondNumber) {
-    		bigNumber = firstNumber;
-    		smallNumber = secondNumber;
-    	}
-    	else if (firstNumber < secondNumber) {
-    		smallNumber = firstNumber;
-    		bigNumber = secondNumber;
-    	}
 
     	int i = 2;
     	while (i <= bigNumber){

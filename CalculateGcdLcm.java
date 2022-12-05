@@ -13,7 +13,6 @@ public class CalculateGcdLcm {
 
     	obeb(firstNumber , secondNumber);
     	okek(firstNumber , secondNumber);
-
     }
 
     static void obeb(int firstNumber , int secondNumber) {
@@ -31,12 +30,14 @@ public class CalculateGcdLcm {
     		bigNumber = secondNumber;
     	}
 
-    	for (int i = 2 ; i <= smallNumber ; i++) {
+    	int i = 2;
+    	while (i <= smallNumber) {
     		while (smallNumber % i == 0 && bigNumber % i == 0){
     			smallNumber /= i;
     			bigNumber /= i;
     			commonMultiply *= i;
     		}
+    		i++;
     	}
     	System.out.printf("OBEB : %d \n" , commonMultiply);
     }
@@ -56,7 +57,8 @@ public class CalculateGcdLcm {
     		bigNumber = secondNumber;
     	}
 
-    	for (int i = 2 ; i <= bigNumber ; i++) {
+    	int i = 2;
+    	while (i <= bigNumber){
     		while (bigNumber % i == 0 && smallNumber % i == 0){
     			bigNumber /= i;
     			smallNumber /= i;
@@ -70,6 +72,7 @@ public class CalculateGcdLcm {
     			smallNumber /= i;
     			commonMultiply *= i;
     		}
+    		i++;
     	}
     	System.out.printf("OKEK : %d \n" , commonMultiply);
 

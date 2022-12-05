@@ -23,48 +23,48 @@ public class CalculateGcdLcm {
     		bigNumber = secondNumber;
     	}
 
-    	calculateOBEB(bigNumber , smallNumber);
-    	calculateOKEK(bigNumber , smallNumber);
+    	calculateGCD(bigNumber , smallNumber);	// OBEB - GREATEST COMMON DIVISOR
+    	calculateLCM(bigNumber , smallNumber); // OKEK - LEAST COMMON MULTIPLE
     }
 
-    static void calculateOBEB(int bigNumber , int smallNumber) {
+    static void calculateGCD(int bigNumber , int smallNumber) {
     	
-    	int obeb = 1;
+    	int gcd = 1;
 
     	int i = 2;
     	while (i <= smallNumber) {
     		while (smallNumber % i == 0 && bigNumber % i == 0){
     			smallNumber /= i;
     			bigNumber /= i;
-    			obeb *= i;
+    			gcd *= i;
     		}
     		i++;
     	}
-    	System.out.printf("OBEB : %d \n" , obeb);
+    	System.out.printf("OBEB : %d \n" , gcd);
     }
 
-    static void calculateOKEK(int bigNumber , int smallNumber) {
+    static void calculateLCM(int bigNumber , int smallNumber) {
 
-    	int okek = 1;	
+    	int lcm = 1;	
 
     	int i = 2;
     	while (i <= bigNumber){
     		while (bigNumber % i == 0 && smallNumber % i == 0){
     			bigNumber /= i;
     			smallNumber /= i;
-    			okek *= i;
+    			lcm *= i;
     		}
     		while (bigNumber % i == 0){
     			bigNumber /= i;
-    			okek *= i;   			
+    			lcm *= i;   			
     		}
     		while (smallNumber % i ==	 0){
     			smallNumber /= i;
-    			okek *= i;
+    			lcm *= i;
     		}
     		i++;
     	}
-    	System.out.printf("OKEK : %d \n" , okek);
+    	System.out.printf("OKEK : %d \n" , lcm);
 
     }
 }

@@ -23,48 +23,48 @@ public class CalculateGcdLcm {
     		bigNumber = secondNumber;
     	}
 
-    	obeb(bigNumber , smallNumber);
-    	okek(bigNumber , smallNumber);
+    	calculateOBEB(bigNumber , smallNumber);
+    	calculateOKEK(bigNumber , smallNumber);
     }
 
-    static void obeb(int bigNumber , int smallNumber) {
+    static void calculateOBEB(int bigNumber , int smallNumber) {
     	
-    	int commonMultiply = 1;
+    	int obeb = 1;
 
     	int i = 2;
     	while (i <= smallNumber) {
     		while (smallNumber % i == 0 && bigNumber % i == 0){
     			smallNumber /= i;
     			bigNumber /= i;
-    			commonMultiply *= i;
+    			obeb *= i;
     		}
     		i++;
     	}
-    	System.out.printf("OBEB : %d \n" , commonMultiply);
+    	System.out.printf("OBEB : %d \n" , obeb);
     }
 
-    static void okek(int bigNumber , int smallNumber) {
+    static void calculateOKEK(int bigNumber , int smallNumber) {
 
-    	int commonMultiply = 1;	
+    	int okek = 1;	
 
     	int i = 2;
     	while (i <= bigNumber){
     		while (bigNumber % i == 0 && smallNumber % i == 0){
     			bigNumber /= i;
     			smallNumber /= i;
-    			commonMultiply *= i;
+    			okek *= i;
     		}
     		while (bigNumber % i == 0){
     			bigNumber /= i;
-    			commonMultiply *= i;   			
+    			okek *= i;   			
     		}
     		while (smallNumber % i ==	 0){
     			smallNumber /= i;
-    			commonMultiply *= i;
+    			okek *= i;
     		}
     		i++;
     	}
-    	System.out.printf("OKEK : %d \n" , commonMultiply);
+    	System.out.printf("OKEK : %d \n" , okek);
 
     }
 }

@@ -4,12 +4,19 @@ public class CalculateGcdLcm {
 
     public static void main(String[] args) {
     	
-    	obeb();
-    	okek();
+    	Scanner keybInput = new Scanner(System.in);
+
+    	System.out.print("İlk Sayı : ");
+    	int firstNumber = keybInput.nextInt();
+    	System.out.print("İkinci Sayı : ");
+    	int secondNumber = keybInput.nextInt();
+
+    	obeb(firstNumber , secondNumber);
+    	okek(firstNumber , secondNumber);
 
     }
 
-    static void obeb() {
+    static void obeb(firstNumber , secondNumber) {
     	
     	int bigNumber = 0;
     	int smallNumber = 0;
@@ -41,7 +48,7 @@ public class CalculateGcdLcm {
     	System.out.printf("OBEB : %d \n" , commonMultiply);
     }
 
-    static void okek() {
+    static void okek(firstNumber , secondNumber) {
 
     	int bigNumber = 0;
     	int smallNumber = 0;
